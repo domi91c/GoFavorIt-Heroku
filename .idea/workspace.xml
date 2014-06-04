@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/untitled16@Development__untitled16.coverage" NAME="Development: untitled16 Coverage Results" MODIFIED="1401914969382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled16" />
+    <SUITE FILE_PATH="coverage/untitled16@Development__untitled16.coverage" NAME="Development: untitled16 Coverage Results" MODIFIED="1401919770692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled16" />
     <SUITE FILE_PATH="coverage/untitled16@db_migrate__untitled16.coverage" NAME="db:migrate: untitled16 Coverage Results" MODIFIED="1401914965542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled16" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -27,16 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="posts.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="171">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="prettify.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/prettify.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,8 +40,8 @@
       <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="110618">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5785" selection-end-column="0" />
+            <state vertical-scroll-proportion="3.1923077" vertical-offset="77565" max-vertical-offset="110618">
+              <caret line="4078" column="69" selection-start-line="4078" selection-start-column="63" selection-end-line="4078" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -60,8 +50,18 @@
       <file leaf-file-name="application.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9126437" vertical-offset="234709" max-vertical-offset="235220">
-              <caret line="12337" column="0" selection-start-line="12337" selection-start-column="0" selection-end-line="12337" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33251834" vertical-offset="74002" max-vertical-offset="235695">
+              <caret line="3886" column="21" selection-start-line="3886" selection-start-column="21" selection-end-line="3886" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-glyphicons.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-glyphicons.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="114">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,8 +151,8 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.less" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/forms.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/gmaps4rails.css" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/flat-ui.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       </list>
     </option>
@@ -631,14 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-glyphicons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
@@ -711,18 +703,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-glyphicons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="110618">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5785" selection-end-column="0" />
+        <state vertical-scroll-proportion="3.1923077" vertical-offset="77565" max-vertical-offset="110618">
+          <caret line="4078" column="69" selection-start-line="4078" selection-start-column="63" selection-end-line="4078" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9126437" vertical-offset="234709" max-vertical-offset="235220">
-          <caret line="12337" column="0" selection-start-line="12337" selection-start-column="0" selection-end-line="12337" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.33251834" vertical-offset="74002" max-vertical-offset="235695">
+          <caret line="3886" column="21" selection-start-line="3886" selection-start-column="21" selection-end-line="3886" selection-end-column="21" />
           <folding />
         </state>
       </provider>
