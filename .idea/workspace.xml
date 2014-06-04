@@ -50,8 +50,8 @@
       <file leaf-file-name="application.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33251834" vertical-offset="74002" max-vertical-offset="235695">
-              <caret line="3886" column="21" selection-start-line="3886" selection-start-column="21" selection-end-line="3886" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.61124694" vertical-offset="125017" max-vertical-offset="235714">
+              <caret line="6535" column="14" selection-start-line="6535" selection-start-column="14" selection-end-line="6535" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -721,8 +721,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33251834" vertical-offset="74002" max-vertical-offset="235695">
-          <caret line="3886" column="21" selection-start-line="3886" selection-start-column="21" selection-end-line="3886" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.61124694" vertical-offset="125017" max-vertical-offset="235714">
+          <caret line="6535" column="14" selection-start-line="6535" selection-start-column="14" selection-end-line="6535" selection-end-column="14" />
           <folding />
         </state>
       </provider>
