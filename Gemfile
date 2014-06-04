@@ -38,4 +38,3 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'i18n', '0.6.1'
