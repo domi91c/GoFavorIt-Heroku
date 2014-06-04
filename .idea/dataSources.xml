@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Rails untitled16: development" uuid="96ba5aa5-7dd7-40fe-b0a3-b65a8912ed00">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:herokutest</jdbc-url>
+      <jdbc-url>jdbc:postgresql:gofav</jdbc-url>
       <user-name>dominic</user-name>
       <user-password>dfcedfc5dfc7dfc3dfc4dfc3dfc9</user-password>
       <libraries />
@@ -12,13 +12,15 @@
     <data-source source="LOCAL" name="Rails untitled16: test" uuid="d40ee09e-5762-4fa5-b29a-1d83a7ba6d7b">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:herokutest</jdbc-url>
+      <jdbc-url>jdbc:postgresql:gofav</jdbc-url>
+      <user-name>dominic</user-name>
+      <user-password>dfcedfc5dfc7dfc3dfc4dfc3dfc9</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails untitled16: production" uuid="4947e7b3-b415-4a1e-926e-477fca9a4360">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:herokutest</jdbc-url>
+      <jdbc-url>jdbc:postgresql:gofav</jdbc-url>
       <user-name>dominic</user-name>
       <user-password>dfcedfc5dfc7dfc3dfc4dfc3dfc9</user-password>
       <libraries />

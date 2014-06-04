@@ -1,10 +1,24 @@
 source 'https://rubygems.org'
 
+gem 'i18n', '~> 0.6.9'
+gem 'devise'
+gem 'flatui-rails'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
+gem 'therubyracer'
+gem 'jazz_hands'
+gem 'gmaps4rails', '~> 1.5.6'
+gem 'geocoder'
+gem 'paperclip', github: 'thoughtbot/paperclip'# Use jquery as the JavaScript library
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'rails_12factor', group: :production
+gem 'unicorn'
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -38,3 +52,29 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'high_voltage'
+
+
+group :development do
+	gem 'better_errors'
+	gem 'binding_of_caller', :platforms=>[:mri_21]
+	gem 'quiet_assets'
+	gem 'rails_layout'
+end
+group :development, :test do
+	gem 'factory_girl_rails'
+	gem 'rspec-rails', '>= 3.0.0.beta2'
+end
+group :test do
+	gem 'capybara'
+	gem 'database_cleaner'
+	gem 'faker'
+	gem 'launchy'
+	gem 'selenium-webdriver'
+end
+
+gem 'bundler'
+
+gem 'jquery-ui-rails'
+gem 'less-rails-bootstrap'
+gem 'designmodo-flatuipro-rails'
