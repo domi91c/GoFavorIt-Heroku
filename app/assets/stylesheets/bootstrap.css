@@ -2505,9 +2505,7 @@ font-url('glyphicons-halflings-regular.ttf') format('truetype'), font-url('glyph
 .glyphicon-headphones:before {
   content: "\e035";
 }
-.glyphicon-volume-off:before {
-  content: "\e036";
-}
+
 .glyphicon-volume-down:before {
   content: "\e037";
 }
