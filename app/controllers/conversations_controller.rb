@@ -1,19 +1,8 @@
 class ConversationsController < ApplicationController
+	before_filter :authenticate_user!
 	helper_method :mailbox, :conversation
-
 	def index
 		@conversations ||= current_user.mailbox.inbox.all
-	end
-
-
-	def create
-		recipient_emails = conversation_params(:recipients).split(',')
-		recipients = User.where(email: recipient_emails).all
-
-		conversation = current_user.
-				send_message(recipients, *conversation_params(:body, :subject)).conversation
-
-		redirect_to conversation
 	end
 
 	def reply
@@ -21,14 +10,24 @@ class ConversationsController < ApplicationController
 		redirect_to conversation
 	end
 
-	def trash
-		conversation.move_to_trash(current_user)
-		redirect_to :conversations
+	def trashbin
+		@trash ||= current_user.mailbox.trash.all
 	end
 
+	def trash
+		conversation.move_to_trash(current_user)
+	redirect_to :conversations
+	end
 	def untrash
 		conversation.untrash(current_user)
-		redirect_to :conversations
+	redirect_to :back
+	end
+
+	def empty_trash
+		current_user.mailbox.trash.each do |conversation|
+			conversation.receipts_for(current_user).update_all(:deleted => true)
+		end
+	redirect_to :conversations
 	end
 
 	private

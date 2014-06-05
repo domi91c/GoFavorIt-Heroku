@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-	get 'flatuipro_demo/index'
-
-
-
+  resources :inboxes
 
 	resources :locations
 
@@ -22,22 +19,22 @@ Rails.application.routes.draw do
 	resources :users
 	root to: 'profiles#index'
 
-	resources :messages do
-		member do
-			post :new
-		end
-	end
-	resources :conversations do
-		member do
-			post :reply
-			post :trash
-			post :untrash
-		end
-		collection do
-			get :trashbin
-			post :empty_trash
-		end
-	end
+  resources :messages do
+	  member do
+		  post :new
+	  end
+  end
+  resources :conversations do
+	  member do
+		  post :reply
+		  post :trash
+		  post :untrash
+	  end
+	  collection do
+		  get :trashbin
+		  post :empty_trash
+	  end
+  end
 # The priority is based upon order of creation: first created -> highest priority.
 	# See how all your routes lay out with "rake routes".
 
