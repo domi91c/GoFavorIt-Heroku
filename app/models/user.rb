@@ -3,11 +3,14 @@ class User < ActiveRecord::Base
 	# :confirmable, :lockable, :timeoutable and :omniauthable
 
 
+	acts_as_messageable
+
 	devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable,
 	       :validatable
 
-	validates :username, :uniqueness => {:case_sensitive => false}
 
+
+	validates :username, :uniqueness => {:case_sensitive => false}
 	has_many :posts
 	has_many :offers
 	has_many :requests
