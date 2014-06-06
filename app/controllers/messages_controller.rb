@@ -7,6 +7,12 @@ class MessagesController < ApplicationController
 		@user = @request.user
 	end
 
+	def reply
+		@request = Request.find(params[:request])
+		@message = current_user.messages.new
+		@user = @request.user
+	end
+
 	# POST /message/create
 	def create
 =begin
@@ -24,8 +30,6 @@ class MessagesController < ApplicationController
 
 	# current_user.send_message(@user, params[:body], params[:subject])
 	flash[:notice] = "Message has been sent!"
-
-	redirect_to root_path
-
+	redirect_to :conversations
 	end
-	end
+end

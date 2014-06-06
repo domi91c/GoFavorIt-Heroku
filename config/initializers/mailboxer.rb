@@ -19,8 +19,6 @@ Mailboxer.setup do |config|
   config.subject_max_length = 255
   config.body_max_length = 32000
 
-  config.notification_mailer = CustomNotificationMailer
-  config.message_mailer      = CustomMessageMailer
 
 
 end

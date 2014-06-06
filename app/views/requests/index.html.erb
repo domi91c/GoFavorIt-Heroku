@@ -34,9 +34,9 @@
           <div class="navlogo">
 
           </div>
-          <%= link_to request.user.username, requests_path(request)  %></td>
+          <%= link_to request.user.username, request_path(request)  %></td>
 
-        <td><%= link_to request.title, requests_path %></td>
+        <td><%= link_to request.title, request_path(request) %></td>
         <td><%= request.created_at.strftime("%H:%M %b %d") %></td>
         <td>        <%= image_tag request.photo.url(:small) %>
 
