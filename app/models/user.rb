@@ -21,7 +21,10 @@ class User < ActiveRecord::Base
 	def name
 		"#{first_name} #{last_name}"
 	end
-	protected
+
+	def mailboxer_email
+			email
+	end
 
 
 
