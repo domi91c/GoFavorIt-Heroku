@@ -45,7 +45,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="stackflow" />
+        <entry key="$PROJECT_DIR$" value="grab" />
       </map>
     </option>
   </component>
@@ -767,7 +767,11 @@
       <created>1402179709786</created>
       <updated>1402179709786</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="zapier test 3">
+      <created>1402181179456</created>
+      <updated>1402181179456</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -846,7 +850,8 @@
     <MESSAGE value="June 7, 2014" />
     <MESSAGE value="zapier test" />
     <MESSAGE value="zapier test 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="zapier test 2" />
+    <MESSAGE value="zapier test 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="zapier test 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
