@@ -852,7 +852,11 @@
       <created>1402177496640</created>
       <updated>1402177496640</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="testing evernote again">
+      <created>1402178219570</created>
+      <updated>1402178219570</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -926,7 +930,8 @@
     <MESSAGE value="must fix replying to conversations" />
     <MESSAGE value="init branch&#10;&#10;june 7" />
     <MESSAGE value="*en: testing evernote" />
-    <option name="LAST_COMMIT_MESSAGE" value="*en: testing evernote" />
+    <MESSAGE value="testing evernote again" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing evernote again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
