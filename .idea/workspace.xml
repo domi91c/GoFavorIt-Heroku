@@ -148,7 +148,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="june6" />
+        <entry key="$PROJECT_DIR$" value="stackflow" />
       </map>
     </option>
   </component>
@@ -856,7 +856,11 @@
       <created>1402178219570</created>
       <updated>1402178219570</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="lalalalallala">
+      <created>1402178392151</created>
+      <updated>1402178392151</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -864,7 +868,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29138166" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29138166" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -931,7 +935,8 @@
     <MESSAGE value="init branch&#10;&#10;june 7" />
     <MESSAGE value="*en: testing evernote" />
     <MESSAGE value="testing evernote again" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing evernote again" />
+    <MESSAGE value="lalalalallala" />
+    <option name="LAST_COMMIT_MESSAGE" value="lalalalallala" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
