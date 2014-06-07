@@ -18,6 +18,7 @@ class ConversationsController < ApplicationController
 		conversation.move_to_trash(current_user)
 	redirect_to :conversations
 	end
+
 	def untrash
 		conversation.untrash(current_user)
 	redirect_to :back
@@ -37,11 +38,13 @@ class ConversationsController < ApplicationController
 	end
 
 	def conversation
+
 		@conversation ||= mailbox.conversations.find(params[:id])
 	end
 
 	def conversation_params(*keys)
 		fetch_params(:conversation, *keys)
+
 	end
 
 	def message_params(*keys)

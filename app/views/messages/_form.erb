@@ -1,9 +1,12 @@
-<%= simple_form_for :message, url: :conversations do |f| %>
-    <%= f.input :subject %>
-    <%= f.input :body %>
+<% @conversation = mailbox.conversations.first %>
 
-    <div class="form-actions">
-      <%= f.button :submit, class: 'btn-primary' %>
-      <%= submit_tag 'Cancel', type: :reset, class: 'btn btn-danger' %>
-    </div>
+Reply:
+<%= form_for :message, url: reply_conversation_path(@conversation.id) do |f| %>
+    <%= f.text_area :subject %>
+    <%= f.text_area :body %>
+    <%= f.submit "Send Message", class: 'btn btn-primary' %>
+    <%= submit_tag 'Clear Reply Box', type: :reset, class: 'btn btn-danger' %>
 <% end %>
+
+
+

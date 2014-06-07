@@ -2,16 +2,12 @@ class MessagesController < ApplicationController
 
 	# GET /message/new
 	def new
+
 		@request = Request.find(params[:request])
 		@message = current_user.messages.new
 		@user = @request.user
 	end
 
-	def reply
-		@request = Request.find(params[:request])
-		@message = current_user.messages.new
-		@user = @request.user
-	end
 
 	# POST /message/create
 	def create
