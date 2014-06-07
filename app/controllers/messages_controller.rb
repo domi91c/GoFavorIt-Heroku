@@ -8,17 +8,8 @@ class MessagesController < ApplicationController
 		@user = @request.user
 	end
 
-
 	# POST /message/create
 	def create
-=begin
-		@recipient = User.find(params[:user])
-		current_user.send_message(@recipient, params[:body], params[:subject])
-		flash[:notice] = "Message has been sent!"
-		redirect_to :conversations
-	end
-=end
-
 
 	@user = User.find(params[:user])
 	@body = params[:body]
