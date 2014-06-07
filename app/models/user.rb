@@ -19,10 +19,12 @@ class User < ActiveRecord::Base
 
 
 	def name
-		"#{first_name} #{last_name}"
+		 "#{first_name} #{last_name}"
+
+
 	end
 
-	def mailboxer_email
+	def mailboxer_email(option)
 			email
 	end
 

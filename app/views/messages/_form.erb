@@ -1,8 +1,5 @@
-<% @conversation = mailbox.conversations.first %>
-
 Reply:
-<%= form_for :message, url: reply_conversation_path(@conversation.id) do |f| %>
-    <%= f.text_area :subject %>
+<%= form_for :message, url: :conversation do |f| %>
     <%= f.text_area :body %>
     <%= f.submit "Send Message", class: 'btn btn-primary' %>
     <%= submit_tag 'Clear Reply Box', type: :reset, class: 'btn btn-danger' %>
