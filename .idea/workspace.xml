@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8a43297-d4bb-4625-a482-b01730c97f57" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/conversations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/conversations/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled16.iws" />
@@ -769,7 +768,11 @@
       <created>1402179157290</created>
       <updated>1402179157290</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="June 7, 2014">
+      <created>1402179174103</created>
+      <updated>1402179174103</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
