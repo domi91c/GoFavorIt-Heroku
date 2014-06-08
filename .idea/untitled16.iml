@@ -229,6 +229,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v2.2.2.0, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.6.2, ruby-2.1.1-p76) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="callsite (v0.0.11, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v2.3.0, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="carrierwave (v0.10.0, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.5.3, ruby-2.1.1-p76) [gem]" level="application" />
@@ -277,6 +278,7 @@
     <orderEntry type="library" scope="PROVIDED" name="libv8 (v3.16.14.3, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mailboxer (v0.12.0.rc2@514fec, ruby-2.1.1-p76) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="meta_request (v0.3.0, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.6.0, ruby-2.1.1-p76) [gem]" level="application" />
@@ -297,6 +299,7 @@
     <orderEntry type="library" scope="PROVIDED" name="pry-stack_explorer (v0.4.9.1, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="quiet_assets (v1.0.2, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, ruby-2.1.1-p76) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-contrib (v1.1.0, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v4.1.1, ruby-2.1.1-p76) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_12factor (v0.0.2, ruby-2.1.1-p76) [gem]" level="application" />
