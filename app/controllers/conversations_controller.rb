@@ -6,58 +6,59 @@ class ConversationsController < ApplicationController
 	end
 
 	def reply
+
 		current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
 		redirect_to conversation
 	end
-	end
+end
 
-	def trashbin
-		@trash ||= current_user.mailbox.trash.all
-	end
+def trashbin
+	@trash ||= current_user.mailbox.trash.all
+end
 
-	def trash
-		conversation.move_to_trash(current_user)
+def trash
+	conversation.move_to_trash(current_user)
 	redirect_to :conversations
-	end
+end
 
-	def untrash
-		conversation.untrash(current_user)
+def untrash
+	conversation.untrash(current_user)
 	redirect_to :back
-	end
+end
 
-	def empty_trash
-		current_user.mailbox.trash.each do |conversation|
-			conversation.receipts_for(current_user).update_all(:deleted => true)
-		end
+def empty_trash
+	current_user.mailbox.trash.each do |conversation|
+		conversation.receipts_for(current_user).update_all(:deleted => true)
+	end
 	redirect_to :conversations
-	end
+end
 
-	private
+private
 
-	def mailbox
-		@mailbox ||= User.find(1).mailbox
-	end
+def mailbox
+	@mailbox ||= current_user.mailbox
+end
 
-	def conversation
+def conversation
 
-		@conversation ||= mailbox.conversations.find(99)
-	end
+	@conversation ||= mailbox.conversations.find(params[:id])
+end
 
-	def conversation_params(*keys)
-		fetch_params(:conversation, *keys)
+def conversation_params(*keys)
+	fetch_params(:conversation, *keys)
 
-	end
+end
 
-	def message_params(*keys)
-		fetch_params(:message, *keys)
-	end
+def message_params(*keys)
+	fetch_params(:message, *keys)
+end
 
-	def fetch_params(key, *subkeys)
-		params[key].instance_eval do
-			case subkeys.size
-				when 0 then self
-				when 1 then self[subkeys.first]
-				else subkeys.map{|k| conversation[k] }
-			end
+def fetch_params(key, *subkeys)
+	params[key].instance_eval do
+		case subkeys.size
+			when 0 then self
+			when 1 then self[subkeys.first]
+			else subkeys.map{|k| self[k] }
 		end
+	end
 end
