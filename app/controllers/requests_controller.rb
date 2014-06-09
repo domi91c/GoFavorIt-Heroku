@@ -3,6 +3,17 @@ class RequestsController < ApplicationController
 
   # GET /requests
   # GET /requests.json
+
+  def offerindex
+	  @requests = Request.where(:favortype => 'offer' )
+
+  end
+
+  def requestindex
+	  @requests = Request.where(:favortype => 'request' )
+
+  end
+
   def index
 	  @requests = Request.all
 
@@ -18,14 +29,24 @@ class RequestsController < ApplicationController
   def show
 	  @user = User.find(current_user)
 	  @requests = @user.requests
-
   end
 
   # GET /requests/new
+=begin
   def new
     @request = Request.new
   end
+=end
 
+  def newoffer
+	  @request = Request.new
+	  @request.favortype = "offer"
+  end
+
+  def newrequest
+	  @request = Request.new
+	  @request.favortype = "request"
+  end
   # GET /requests/1/edit
   def edit
   end
@@ -78,6 +99,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-	    params.require(:request).permit(:title, :description, :username, :photo).merge(user_id: current_user.id,)
+	    params.require(:request).permit(:title, :description, :username, :photo, :favortype).merge(user_id: current_user.id,)
     end
 end

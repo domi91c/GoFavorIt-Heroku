@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
 	resources :locations
 
-	resources :requests
 
 	resources :offers
 
@@ -35,6 +34,19 @@ Rails.application.routes.draw do
 		  post :empty_trash
 	  end
   end
+
+  resources :requests do
+	  member do
+
+	  end
+	  collection do
+		  get  'offerindex' => :offerindex
+		  get  'requestindex' => :requestindex
+		  get 'newoffer' => :newoffer
+		  get 'newrequest' => :newrequest
+	  end
+  end
+
 # The priority is based upon order of creation: first created -> highest priority.
 	# See how all your routes lay out with "rake routes".
 
