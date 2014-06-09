@@ -12,11 +12,11 @@ class MessagesController < ApplicationController
 	# POST /message/create
 	def create
 
-	@user = User.find(params[:user])
-	@body = params[:body]
-	@subject = params[:subject]
-	current_user.send_message(@user, params[:body], params[:subject])
-	flash[:notice] = "Message has been sent!"
-	redirect_to :conversations
+		@user = User.find(params[:user])
+		@body = params[:body]
+		@subject = params[:subject]
+		current_user.send_message(@user, params[:body], params[:subject])
+		flash[:notice] = "Message has been sent!"
+		redirect_to :conversations
 	end
 end

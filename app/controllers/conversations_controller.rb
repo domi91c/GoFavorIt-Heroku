@@ -9,6 +9,7 @@ class ConversationsController < ApplicationController
 		current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
 		redirect_to conversation
 	end
+	end
 
 	def trashbin
 		@trash ||= current_user.mailbox.trash.all
@@ -34,12 +35,12 @@ class ConversationsController < ApplicationController
 	private
 
 	def mailbox
-		@mailbox ||= current_user.mailbox
+		@mailbox ||= User.find(1).mailbox
 	end
 
 	def conversation
 
-		@conversation ||= mailbox.conversations.find(params[:id])
+		@conversation ||= mailbox.conversations.find(99)
 	end
 
 	def conversation_params(*keys)
@@ -56,8 +57,7 @@ class ConversationsController < ApplicationController
 			case subkeys.size
 				when 0 then self
 				when 1 then self[subkeys.first]
-				else subkeys.map{|k| self[k] }
+				else subkeys.map{|k| conversation[k] }
 			end
 		end
-	end
 end
