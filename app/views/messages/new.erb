@@ -1,6 +1,6 @@
 Send a message to
 
-<%= @user.full_name %>
+<%= @user.email %>
 <%= form_tag({controller: "messages", action: "create"}, method: :post) do %>
     <%= label_tag :subject %>
     <%= text_field_tag :subject %>
