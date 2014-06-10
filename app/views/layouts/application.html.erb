@@ -49,11 +49,13 @@
             <li class="active"><%= link_to "Sign In", new_user_session_path %></li>
         <%end%>      </ul>
       <form class="navbar-form navbar-right">
-        <select class="span2">
-          <option>All</option>
-          <option>Offers</option>
-          <option>Requests</option>
+        <%= select("Contact", "email_provider", Contact::PROVIDERS, {:include_blank => true}) %>
 
+        <select name="Contact[email_provider]">
+          <option></option>
+          <option>yahoo</option>
+          <option>gmail</option>
+          <option>msn</option>
         </select>
         <input class="span2" id="search-query-2" placeholder="Search favors..." type="text">
       </form>
