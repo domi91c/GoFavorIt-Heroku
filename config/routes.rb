@@ -37,7 +37,6 @@ Rails.application.routes.draw do
 
   resources :requests do
 	  member do
-			post 'createrequest' => :
 	  end
 	  collection do
 		  get  'offerindex' => :offerindex
@@ -46,6 +45,8 @@ Rails.application.routes.draw do
 		  get 'newrequest' => :newrequest
 	  end
   end
+
+
 
 # The priority is based upon order of creation: first created -> highest priority.
 	# See how all your routes lay out with "rake routes".

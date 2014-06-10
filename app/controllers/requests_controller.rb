@@ -55,6 +55,7 @@ class RequestsController < ApplicationController
   # POST /requests.json
 	def createrequest
 		@request = Request.new(request_params)
+
 		@request.favortype = "request"
 
 		respond_to do |format|
