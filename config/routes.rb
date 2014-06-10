@@ -37,7 +37,7 @@ Rails.application.routes.draw do
 
   resources :requests do
 	  member do
-
+			post 'createrequest' => :
 	  end
 	  collection do
 		  get  'offerindex' => :offerindex

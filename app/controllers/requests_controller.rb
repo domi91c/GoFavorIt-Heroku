@@ -53,8 +53,24 @@ class RequestsController < ApplicationController
 
   # POST /requests
   # POST /requests.json
-  def create
+	def createrequest
+		@request = Request.new(request_params)
+		@request.favortype = "request"
+
+		respond_to do |format|
+			if @request.save
+				format.html { redirect_to @request, notice: 'Request was successfully created.' }
+				format.json { render :show, status: :created, location: @request }
+			else
+				format.html { render :new }
+				format.json { render json: @request.errors, status: :unprocessable_entity }
+			end
+		end
+	end
+
+	def createoffer
     @request = Request.new(request_params)
+    @request.favortype = "offer"
 
     respond_to do |format|
       if @request.save
