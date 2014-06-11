@@ -49,8 +49,12 @@
         <% end %>      </ul>
       <form class="navbar-form navbar-right">
 
-
-        <input class="span2" id="search-query-2" placeholder="Search favors..." type="text">
+          <%= form_tag(requests_path, :method => :get) do %>
+              <%= text_field_tag :search, nil,
+                                 {:id => "search-query-2", :placeholder => "Search favors..."} %>
+              <%= hidden_field_tag :use_keywords, "true" %>
+              <%= hidden_field_tag :wide_search, "true" %>
+          <% end %>
       </form>
     </div>
   </div>
@@ -60,6 +64,7 @@
   </div>
 </nav>
 
+<div style="padding-top: 60px;"></div>
 
 <div class="logo page-header">
 
