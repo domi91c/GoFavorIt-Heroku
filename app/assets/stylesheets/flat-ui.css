@@ -1100,7 +1100,7 @@ a.muted:focus {
   *display: inline;
 }
 .btn > [class^="fui-"].pull-right {
-  margin-right: 0px;
+  /*margin-right: 0px;*/
 }
 .btn-toolbar .btn.active {
   color: #ffffff;
@@ -5149,7 +5149,7 @@ input.search-query {
     display: block;
     min-width: auto;
     margin-bottom: 10px;
-    margin-right: -15px;
+    /*margin-right: -15px;*/
   }
 }
 .alert-success {
@@ -6327,7 +6327,7 @@ input.search-query {
 .mrn,
 .mhn,
 .man {
-  margin-right: 0px;
+  /*margin-right: 0px;*/
 }
 .mrx,
 .mhx,

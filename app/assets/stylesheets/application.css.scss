@@ -13,10 +13,19 @@
  *= require_self
  */
 
+.profile-image {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  vertical-align:middle;
+
+}
+
+
 
 .navbar-inverse {
   background-color: #0075a7;
   border:none
+
 }
 #search-query-2{
   background-color: #293a4a;
@@ -108,8 +117,8 @@
 #headerbar2 {
   background-color: #d0e3c6;
   color: #bac1c8;
-  padding: 6px;
   border: none;
+  height: 10px;
 
 }
 
@@ -6532,7 +6541,7 @@ you can use the generic selector below, but it's slower:
 }
 #search-query-2,
 #search-query-5 {
-  width: 211px;
+  width: 361px;
   height: 30px
 }
 #search-query-3 {

@@ -10,7 +10,9 @@
 
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
   <div class="container-fluid">
+
     <div class="pull-left ">
       <!-- <div class="nav-header">
          <div class="navlogo"></div>
@@ -47,26 +49,29 @@
         <% else %>
             <li class="active"><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>      </ul>
+      <div class="pull-left profile-image" style="color: white">
+        <img src="http://placehold.it/30x30">
+            <%= current_user.email%>
+      </div>
       <form class="navbar-form navbar-right">
 
-        <%= @options = FavorSelect.all %>
-        <%= collection_select("request", "favorselect", @options, :id, :favorselect, {:prompt => "Please select..."}) %>
+        <!--<%= @options = FavorSelect.all %>-->
 
-        <%= form_tag(requests_path, :method => :get) do %>
+        <%= form_tag(offers_path, :method => :get) do %>
 
 
             <%= text_field_tag :search, nil,
-                                 {:id => "search-query-2", :placeholder => "Search favors..."} %>
+                                 {:id => "search-query-2", :placeholder => "Search offers..."} %>
               <%= hidden_field_tag :use_keywords, "true" %>
               <%= hidden_field_tag :wide_search, "true" %>
           <% end %>
       </form>
     </div>
   </div>
-
   <div id="headerbar2">
 
   </div>
+
 </nav>
 
 <div style="padding-top: 60px;"></div>
