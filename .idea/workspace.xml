@@ -32,8 +32,8 @@
       <file leaf-file-name="requests_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/requests_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40714285" vertical-offset="494" max-vertical-offset="1691">
-              <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.7057143" vertical-offset="494" max-vertical-offset="1691">
+              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -484,7 +484,11 @@
       <created>1402468340035</created>
       <updated>1402468340035</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit to prod">
+      <created>1402469298484</created>
+      <updated>1402469298484</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -530,7 +534,8 @@
     </option>
     <MESSAGE value="trying to get git working again :(" />
     <MESSAGE value="Merge branch 'master' of github.com:portOdin/GoFavorIt-Heroku into master222&#10;&#10;Conflicts:&#10;&#9;.idea/.generators&#10;&#9;.idea/.rakeTasks&#10;&#9;.idea/untitled16.iml&#10;&#9;.idea/vcs.xml&#10;&#9;Gemfile&#10;&#9;Gemfile.lock&#10;&#9;app/assets/stylesheets/application.css.scss&#10;&#9;app/controllers/requests_controller.rb&#10;&#9;app/models/user.rb&#10;&#9;app/views/layouts/application.html.erb&#10;&#9;app/views/offers/index.html.erb&#10;&#9;app/views/offers/show.html.erb&#10;&#9;app/views/requests/index.html.erb&#10;&#9;app/views/requests/show.html.erb&#10;&#9;config/application.rb&#10;&#9;config/routes.rb&#10;&#9;db/schema.rb&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:portOdin/GoFavorIt-Heroku into master222&#10;&#10;Conflicts:&#10;&#9;.idea/.generators&#10;&#9;.idea/.rakeTasks&#10;&#9;.idea/untitled16.iml&#10;&#9;.idea/vcs.xml&#10;&#9;Gemfile&#10;&#9;Gemfile.lock&#10;&#9;app/assets/stylesheets/application.css.scss&#10;&#9;app/controllers/requests_controller.rb&#10;&#9;app/models/user.rb&#10;&#9;app/views/layouts/application.html.erb&#10;&#9;app/views/offers/index.html.erb&#10;&#9;app/views/offers/show.html.erb&#10;&#9;app/views/requests/index.html.erb&#10;&#9;app/views/requests/show.html.erb&#10;&#9;config/application.rb&#10;&#9;config/routes.rb&#10;&#9;db/schema.rb&#10;" />
+    <MESSAGE value="commit to prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit to prod" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -867,8 +872,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/requests_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40714285" vertical-offset="494" max-vertical-offset="1691">
-          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.7057143" vertical-offset="494" max-vertical-offset="1691">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
           <folding />
         </state>
       </provider>
