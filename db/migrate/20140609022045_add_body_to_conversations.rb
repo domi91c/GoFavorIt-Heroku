@@ -1,5 +1,5 @@
 class AddBodyToConversations < ActiveRecord::Migration
   def change
-    add_column :conversations, :body, :text
+    add_column :mailboxer_conversations, :body, :text
   end
 end

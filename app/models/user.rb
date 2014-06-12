@@ -16,16 +16,12 @@ class User < ActiveRecord::Base
 	has_many :requests
 	has_one :profile
 
-
-
 	def name
 		 "#{first_name} #{last_name}"
-
-
 	end
 
 	def mailboxer_email(option)
-			email
+		email
 	end
 
 

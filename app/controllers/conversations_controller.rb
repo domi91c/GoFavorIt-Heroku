@@ -7,9 +7,8 @@ class ConversationsController < ApplicationController
 	end
 
 	def reply
-
 		current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
-		redirect_to conversation
+		redirect_to conversation_path(conversation)
 	end
 
 
@@ -55,7 +54,9 @@ class ConversationsController < ApplicationController
 	end
 
 	def fetch_params(key, *subkeys)
+		# debugger
 		params[key].instance_eval do
+			# debugger
 			case subkeys.size
 				when 0 then
 					self

@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'i18n', '~> 0.6.9'
 gem 'devise'
 gem 'flatui-rails'
 gem 'less-rails'
