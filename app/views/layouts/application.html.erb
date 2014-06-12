@@ -52,7 +52,7 @@
         <% end %>      </ul>
       <div class="pull-left profile-image" style="color: white">
         <img src="http://placehold.it/30x30">
-            <%= current_user.email%>
+            <%= current_user.try(:email)%>
 
               <span class="glyphicon glyphicon-triangle-up"></span><span class="hidden-desktop"></span>
       </div>
