@@ -23,9 +23,13 @@ Rails.application.routes.draw do
 	  member do
 		  post :new
 	  end
+	  collection do
+	  	get :reply
+	  end
   end
   resources :conversations do
 	  member do
+	  	get  :reply
 		  post :reply
 		  post :trash
 		  post :untrash

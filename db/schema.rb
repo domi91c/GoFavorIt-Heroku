@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140611161439) do
     t.string   "subject",    default: ""
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.text     "body"
   end
 
   create_table "mailboxer_notifications", force: true do |t|
