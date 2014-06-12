@@ -50,15 +50,18 @@
         <% else %>
             <li class="active"><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>      </ul>
-      <div class="pull-left profile-image" style="color: white">
+      <% if user_signed_in? %>
+
+    <div class="pull-left profile-image" style="color: white">
         <img src="http://placehold.it/30x30">
             <%= current_user.email%>
 
               <span class="glyphicon glyphicon-triangle-up"></span><span class="hidden-desktop"></span>
       </div>
+          <% end %>
+
 
       <form class="navbar-form navbar-right">
-
         <!--<%= @options = FavorSelect.all %>-->
 
         <%= form_tag(offers_path, :method => :get) do %>
@@ -79,7 +82,7 @@
 </nav>
 
 <div style="padding-top: 60px; ">
-  <div class="iconbar iconbar-horizontal iconbar-success pull-right fixed-top" style="background-color: #293a4a;margin-left:auto; margin-right:0; border-radius: 0px 0px 0px 10px;">
+  <div class="iconbar iconbar-horizontal iconbar-success pull-right fixed-top" style="background-color: #293a4a;margin-left:auto; margin-right:0; border-radius: 0px 0px 0px 10px; vertical-align: middle; height: 60px">
     <ul>
       <li><a href="#fakelink" class="glyphicon glyphicon-user"></a></li>
       <li class="active"><a href="#fakelink" class=" glyphicon glyphicon-eye-open"></a></li>
