@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="http://i.icomoon.io/public/temp/4d3f767796/UntitledProject2/style.css">
 </head>
 <body>
 
@@ -52,7 +53,10 @@
       <div class="pull-left profile-image" style="color: white">
         <img src="http://placehold.it/30x30">
             <%= current_user.email%>
+
+              <span class="glyphicon glyphicon-triangle-up"></span><span class="hidden-desktop"></span>
       </div>
+
       <form class="navbar-form navbar-right">
 
         <!--<%= @options = FavorSelect.all %>-->
@@ -74,7 +78,21 @@
 
 </nav>
 
-<div style="padding-top: 60px;"></div>
+<div style="padding-top: 60px; ">
+  <div class="iconbar iconbar-horizontal iconbar-success pull-right fixed-top" style="background-color: #293a4a;margin-left:auto; margin-right:0; border-radius: 0px 0px 0px 10px;">
+    <ul>
+      <li><a href="#fakelink" class="glyphicon glyphicon-user"></a></li>
+      <li class="active"><a href="#fakelink" class=" glyphicon glyphicon-eye-open"></a></li>
+      <li><a href="#fakelink" class=" glyphicon glyphicon-cog"></a></li>
+      <li><a href="#fakelink" class="glyphicon glyphicon-comment"></a></li>
+      <li>
+        <a href="#fakelink" class="glyphicon glyphicon-comment">
+          <span class="iconbar-unread">1</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <div class="logo page-header">
 

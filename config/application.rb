@@ -8,8 +8,11 @@ Bundler.require(*Rails.groups)
 
 module Favrebuild
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
+
+		config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
+
+
     # -- all .rb files in that directory are automatically loaded.
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
