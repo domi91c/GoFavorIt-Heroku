@@ -1,7 +1,21 @@
 <h1> <%= conversation.subject %> </h1>
-<% content_tag_for(:li, conversation.receipts_for(current_user)) do |receipt| %>
-    <%= message = receipt.message %>
-    <h3><%= message.subject %> </h3>
-    <p><%= message.body %> </p>
-    <%# render 'messages/form', conversation: conversation %>
+
+
+<table class="table table-striped" >
+  <tbody>
+  <% @message = conversation.messages%>
+  <% @message.each do |m| %>
+<tr>
+    <td> <%= m.body %> </td>
+</tr>
 <% end %>
+
+  </tbody>
+</table>
+<table>
+  <%= content_tag_for(:tr, @mail ) do |conversation| %>
+      <% message = conversation.messages.first %>
+      <td><%= link_to message.sender.name, message.sender %></td>
+      <td><%= message.body %></td>
+  <% end %>
+</table>

@@ -1,5 +1,7 @@
 <% @conversations.each do |conversation| %>
     <br>
+    <% if conversation.originator != current_user  %>
+        <%= conversation.originator.email %>
     <%= link_to conversation.id, reply_conversation_path(conversation.id) %>
     <%= link_to conversation.subject %>
     <!--<%= link_to conversation.messages %>-->
@@ -11,4 +13,4 @@
     <%= link_to "Move to Trash", {:controller => "conversations", :action => "trash", :id => conversation.id}, :title=> "Move to Trash", :method=>'post' %>
 
 <% end %>
-
+<% end  %>
