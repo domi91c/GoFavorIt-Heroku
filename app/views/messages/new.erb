@@ -1,9 +1,9 @@
-Send a message to
+Reply to post:
 
-<%= @user.email %>
+<h4><%=  @request.title %></h4>
+<h4>From: <%= @user.email %></h4>
 <%= form_tag({controller: "messages", action: "create"}, method: :post) do %>
-    <%= label_tag :subject %>
-    <%= text_field_tag :subject %>
+    <%= hidden_field_tag :subject, @request.title %>
     <%= label :body, "Message text" %>
     <%= text_area_tag :body %>
     <%= hidden_field_tag(:user, "#{@user.id}") %>

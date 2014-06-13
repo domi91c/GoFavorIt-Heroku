@@ -1,16 +1,28 @@
-<% @conversations.each do |conversation| %>
-    <br>
-    <% if conversation.originator != current_user  %>
-        <%= conversation.originator.email %>
-    <%= link_to conversation.id, reply_conversation_path(conversation.id) %>
-    <%= link_to conversation.subject %>
-    <!--<%= link_to conversation.messages %>-->
+<h1>Inbox</h1>
+<table class="table table-striped">
+  <tbody>
+  <% @conversations.each do |conversation| %>
+  <tr>
+      <% if conversation.originator != current_user %>
+          <td>
+            <div class="navlogo">
 
-    <%= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p") %>
+            </div>
+          <td><%= check_box_tag '', conversation.id, false, class: 'delete_multiple_checkbox', name: "conversations[]" %>
+        <td><%= 'unread' if conversation.is_unread?(current_user) %></td>
 
-    <%= link_to "Reply", {:controller => "messages", :action => "reply", :id => conversation.id}, :title=> "Reply" %>
+          <td>  <%= conversation.originator.email %></td>
+          <td><%= link_to conversation.subject, conversation_path(conversation) %></td>
+          <!--<%= link_to conversation.messages %>-->
 
-    <%= link_to "Move to Trash", {:controller => "conversations", :action => "trash", :id => conversation.id}, :title=> "Move to Trash", :method=>'post' %>
+          <td><%= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p") %></td>
 
-<% end %>
-<% end  %>
+          <td><%= link_to "Reply", {:controller => "messages", :action => "reply", :id => conversation.id}, :title => "Reply" %></td>
+
+          <td> <%= link_to "Move to Trash", {:controller => "conversations", :action => "trash", :id => conversation.id}, :title => "Move to Trash", :method => 'post' %></td>
+        </tr>
+          </tbody>
+
+      <% end %>
+  <% end %>
+  </table>

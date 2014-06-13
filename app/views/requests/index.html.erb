@@ -2,7 +2,7 @@
 
 
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%= t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
   <%= form_tag requests_path, :method => "get" do %>
       <div class="span3">
 
@@ -10,7 +10,7 @@
       <div class="span2 search-query search-query-rounded" style="display: inline-block">
 
         <%= text_field_tag :search, params[:search], placeholder: "Search Offers",
-                           :style => 'width: 500px; display: inline-block; height: 36px; vertical-align: middle;'%>
+                           :style => 'width: 500px; display: inline-block; height: 36px; vertical-align: middle;' %>
         <%= button_tag("Search", type: 'submit', class: "btn btn-primary") do %>
             <span class="glyphicon glyphicon-search"> </span> Search
         <% end %></div>
@@ -27,7 +27,7 @@
     <th><%= User %></th>
     <th><%= model_class.human_attribute_name(:title) %></th>
     <th><%= model_class.human_attribute_name(:created_at) %></th>
-    <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    <th><%= t '.actions', :default => t("helpers.actions") %></th>
   </tr>
   </thead>
   <tbody>
@@ -37,7 +37,7 @@
           <div class="navlogo">
 
           </div>
-          <%= link_to request.user.username, request_path(request)  %></td>
+          <%= link_to request.user.username, request_path(request) %></td>
 
         <td><%= link_to request.title, request_path(request) %></td>
         <td><%= request.created_at.strftime("%H:%M %b %d") %></td>
@@ -48,14 +48,14 @@
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       request_path(request),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
                       :class => 'button button-mini button-danger' %>
         </td>
       </tr>
   <% end %>
   </tbody>
 </table>
-<%= button_to new_request_path, class: "btn btn-large primary", :method => :get  do %>
+<%= button_to new_request_path, class: "btn btn-large primary", :method => :get do %>
     New Request <i class="glyphicon glyphicon-plus"></i>
 <% end %>
 
