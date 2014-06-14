@@ -12,8 +12,10 @@
 </dl>
 
 <div class="form-actions">
+  <% if @request.user != current_user %>
   <%= link_to "Reply",
               new_message_path(:request => @request.id), :class => 'btn'  %>
+  <% end %>
   <%= link_to t('.back', :default => t("helpers.links.back")),
               requests_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
