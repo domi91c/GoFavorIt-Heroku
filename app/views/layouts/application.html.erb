@@ -56,15 +56,18 @@
 
         <img src="http://placehold.it/30x30">
             <%= current_user.try(:email)%>
+
        <div class="mail-icon">
       <a href="#fakelink">
-        <%= link_to image_tag("icons/png/Mail.png", height: '32', width: '32'), conversations_path %>
+        <%= link_to image_tag("icons/png/Mail.png", height: '26', width: '26'), conversations_path %>
       </a>      </div>
     </div>
           <% end %>
 
         <div class="mail-badge">
+          <% if user_signed_in? %>
           <%=  current_user.mailbox.inbox({:read => false}).count%>
+              <% end %>
         </div>
       <form class="navbar-form navbar-right">
         <!--<%= @options = FavorSelect.all %>-->
@@ -98,12 +101,26 @@
 </div>
 <div class="col-sm-3 col-md-2 sidebar-offcanvas well" id="sidebar" role="navigation">
   <ul class="nav nav-list">
-    <li class="nav-header">Sidebar</li>
-    <li><%= link_to "Profile", profiles_path %></li>
-    <li><%= link_to "Offers", offers_path %></li>
-    <li><%= link_to "Requests", requests_path %></li>
-    <li><%= link_to "Post Ad", new_post_path %></li>
-    <li><%= link_to "Messages", conversations_path %></li>
+    <li class="nav-header">Categories</li>
+    <li><%= link_to "Labor", profiles_path %></li>
+    <li><%= link_to "Carpooling", offers_path %></li>
+    <li><%= link_to "Tutoring", requests_path %></li>
+    <li><%= link_to "Social", new_post_path %></li>
+    <li><%= link_to "Art", conversations_path %></li>
+    <li><%= link_to "Career", conversations_path %></li>
+    <li><%= link_to "Delivery", conversations_path %></li>
+    <li><%= link_to "Learning", conversations_path %></li>
+    <li><%= link_to "Labor", profiles_path %></li>
+    <li><%= link_to "Carpooling", offers_path %></li>
+    <li><%= link_to "Tutoring", requests_path %></li>
+    <li><%= link_to "Social", new_post_path %></li>
+    <li><%= link_to "Art", conversations_path %></li>
+    <li><%= link_to "Career", conversations_path %></li>
+    <li><%= link_to "Delivery", conversations_path %></li>
+    <li><%= link_to "Learning", conversations_path %></li>
+
+
+
   </ul>
 
 </div>

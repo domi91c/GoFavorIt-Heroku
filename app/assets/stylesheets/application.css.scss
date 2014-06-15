@@ -13,9 +13,21 @@
  *= require_self
  */
 
+
+.watch-icon {
+  color: white;
+  margin-left:100px;
+  display: inline;
+}
+.watch-badge {
+  color: white;
+  display: inline;
+  border: solid .2px;
+  border-radius: 10;
+}
 .mail-icon {
   color: white;
-  margin-left:120px;
+  margin-left:150px;
   display: inline;
 }
 .mail-badge {
@@ -90,9 +102,9 @@
 
 .logo {
 
-  margin-top: 70px;
-  content:url(gofavorit_logo_crpd.png);
-  height: 120px;
+  margin-top: 100px;
+  content:url(gofavorit-brackets-logo.png);
+  height: 70px;
 }
 
 
