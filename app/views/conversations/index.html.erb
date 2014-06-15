@@ -4,14 +4,16 @@
   <% @conversations.each do |conversation| %>
   <tr>
       <% if conversation.originator != current_user %>
-          <td>
+
+        <td>
             <div class="navlogo">
 
             </div>
-          <td><%= check_box_tag '', conversation.id, false, class: 'delete_multiple_checkbox', name: "conversations[]" %>
+        <td>  <%= conversation.originator.email %></td>
+
         <td><%= 'unread' if conversation.is_unread?(current_user) %></td>
 
-          <td>  <%= conversation.originator.email %></td>
+
           <td><%= link_to conversation.subject, conversation_path(conversation) %></td>
           <!--<%= link_to conversation.messages %>-->
 
@@ -20,6 +22,8 @@
           <td><%= link_to "Reply", {:controller => "messages", :action => "reply", :id => conversation.id}, :title => "Reply" %></td>
 
           <td> <%= link_to "Move to Trash", {:controller => "conversations", :action => "trash", :id => conversation.id}, :title => "Move to Trash", :method => 'post' %></td>
+        <td><%= check_box_tag '', conversation.id, false, class: 'delete_multiple_checkbox', name: "conversations[]" %>
+
         </tr>
           </tbody>
 
