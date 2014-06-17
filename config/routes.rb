@@ -13,7 +13,12 @@ Rails.application.routes.draw do
 	resources :home
 
 	resources :posts
-	devise_for :users, :controllers => { :registrations => "registrations" }
+
+  resources :galleries
+
+  resources :pictures
+
+  devise_for :users, :controllers => { :registrations => "registrations" }
 
 
 	resources :users

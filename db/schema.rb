@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616001120) do
+ActiveRecord::Schema.define(version: 20140617173718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 20140616001120) do
     t.string   "favorselect"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "galleries", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "cover"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "inboxes", force: true do |t|
@@ -126,12 +135,14 @@ ActiveRecord::Schema.define(version: 20140616001120) do
 
   create_table "pictures", force: true do |t|
     t.string   "description"
-    t.string   "image"
-    t.integer  "request_id"
-    t.integer  "offer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "offer_token"
+    t.integer  "gallery_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.string   "image"
   end
 
   create_table "post_attachments", force: true do |t|

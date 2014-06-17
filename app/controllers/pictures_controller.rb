@@ -3,9 +3,9 @@ class PicturesController < ApplicationController
   # GET /pictures.json
   def index
 
-    @offer = Offer.find(params[:offer_id])
+    @gallery = Gallery.find(params[:gallery_id])
 
-    @pictures = @offer.pictures
+    @pictures = @gallery.pictures
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,7 +27,7 @@ class PicturesController < ApplicationController
   # GET /pictures/new
   # GET /pictures/new.json
   def new
-    @gallery = Offer.find(params[:offer_id])
+    @gallery = Gallery.find(params[:gallery_id])
     @picture = @gallery.pictures.build
 
     respond_to do |format|
@@ -38,7 +38,7 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1/edit
   def edit
-    @gallery = Offer.find(params[:offer_id])
+    @gallery = Gallery.find(params[:gallery_id])
 
     @picture = @gallery.pictures.find(params[:id])
     # @picture = Picture.find(params[:id])
@@ -69,7 +69,7 @@ class PicturesController < ApplicationController
   # PUT /pictures/1.json
   def update
 
-    @gallery = Offer.find(params[:offer_id])
+    @gallery = Gallery.find(params[:gallery_id])
 
     @picture = @gallery.pictures.find(params[:id])
 
@@ -87,7 +87,7 @@ class PicturesController < ApplicationController
   # DELETE /pictures/1
   # DELETE /pictures/1.json
   def destroy
-    @gallery = Offer.find(params[:offer_id])
+    @gallery = Gallery.find(params[:gallery_id])
     @picture = @gallery.pictures.find(params[:id])
     @picture.destroy
 
@@ -99,7 +99,7 @@ class PicturesController < ApplicationController
 
   def make_default
     @picture = Picture.find(params[:id])
-    @gallery = Offer.find(params[:offer_id])
+    @gallery = Gallery.find(params[:gallery_id])
 
     @gallery.cover = @picture.id
     @gallery.save

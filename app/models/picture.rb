@@ -1,12 +1,12 @@
 class Picture < ActiveRecord::Base
+  # attr_accessible :description, :gallery_id, :image
 
-	attr_accessor :image_file_name
+  belongs_to :gallery
 
-	belongs_to :offer
+  has_attached_file :image,
+    :path => ":rails_root/public/images/:id/:filename",
+    :url  => "/images/:id/:filename"
 
-	has_attached_file :image,
-	                  :path => ":rails_root/public/images/:id/:filename",
-	                  :url  => "/images/:id/:filename"
+  do_not_validate_attachment_file_type :image
 
-	do_not_validate_attachment_file_type :image
 end
