@@ -13,7 +13,21 @@
 
       </textarea>
 
+    <div class="control-group">
+      <%= f.label :longitude, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :longitude, :class => 'text_field' %>
+      </div>
+
+
       <div class="control-group">
+        <%= f.label :latitude, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :latitude, :class => 'text_field' %>
+        </div>
+
+
+        <div class="control-group">
         <%= f.label :address, :class => 'control-label' %>
         <div class="controls">
           <%= f.text_field :address, :class => 'text_field' %>
@@ -33,3 +47,4 @@
     </div>
         </div>
 <% end %>
+</div>

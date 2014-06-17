@@ -31,6 +31,8 @@
   </tr>
   </thead>
   <tbody>
+  <%= paginate @requests %>
+
   <% @requests.each do |request| %>
       <tr>
         <td>
