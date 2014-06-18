@@ -3,6 +3,5 @@ class AddRequestIdToGallery < ActiveRecord::Migration
     add_column :galleries, :request_id, :integer
     add_column :galleries, :offer_id, :integer
 
-	  remove_column :requests, :gallery_id, :string
   end
 end

@@ -18,13 +18,16 @@ class RequestsController < ApplicationController
   def show
 	  @user = User.find(current_user)
 	  @requests = @user.requests
-	  @gallery = Gallery.new
+	  @gallery = Gallery.find(params[:gallery_id])
+	  @pictures = @gallery.pictures
 
   end
 
   # GET /requests/new
   def new
     @request = Request.new
+	  @gallery = Gallery.new
+
 
   end
 
@@ -80,6 +83,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-	    params.require(:request).permit(:title, :description, :username, :photo).merge(user_id: current_user.id,)
+	    params.require(:request).permit(:title, :description, :username, :photo, :gallery_id).merge(user_id: current_user.id,)
     end
 end
