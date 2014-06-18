@@ -1,8 +1,7 @@
 <%= form_for @request, :html => { :multipart => true } do |f| %>
 
-  <%= render partial: "shared/errors", locals: {obj: @request} %> 
+  <%= render partial: "shared/errors", locals: {obj: @request} %>
 
-  <%= f.file_field :photo %>
 
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
@@ -17,7 +16,8 @@
     </div>
   </div>
 
-  <div class="form-actions">
+
+        <div class="form-actions">
     <%= f.submit nil, :class => 'button' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 requests_path, :class => 'button' %>

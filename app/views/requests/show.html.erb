@@ -2,7 +2,6 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
-<%= image_tag @request.photo.url(:small) %>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
@@ -10,6 +9,8 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @request.description %></dd>
 </dl>
+
+<%= render partial: "galleries/form", locals: { form: @gallery } %>
 
 <div class="form-actions">
   <% if @request.user != current_user %>

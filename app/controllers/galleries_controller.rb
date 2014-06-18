@@ -65,10 +65,10 @@ class GalleriesController < ApplicationController
   # PUT /galleries/1
   # PUT /galleries/1.json
   def update
-    @gallery = Gallery.find(gallery_params)
+    @gallery = Gallery.find(params[:id])
 
     respond_to do |format|
-      if @gallery.update_attributes(params[:gallery])
+      if @gallery.update_attributes(gallery_params)
         format.html { redirect_to @gallery, notice: 'Gallery was successfully updated.' }
         format.json { head :no_content }
       else
@@ -81,7 +81,7 @@ class GalleriesController < ApplicationController
   # DELETE /galleries/1
   # DELETE /galleries/1.json
   def destroy
-    @gallery = Gallery.find(gallery_params)
+    @gallery = Gallery.find(params[:id])
     @gallery.destroy
 
     respond_to do |format|
@@ -91,6 +91,6 @@ class GalleriesController < ApplicationController
   end
 
   def gallery_params
-	  params.require(:gallery).permit(:name, :description, :cover, :token, :image)
+	  params.require(:gallery).permit(:name, :description, :cover, :token)
   end
 end

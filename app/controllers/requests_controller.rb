@@ -18,12 +18,14 @@ class RequestsController < ApplicationController
   def show
 	  @user = User.find(current_user)
 	  @requests = @user.requests
+	  @gallery = Gallery.new
 
   end
 
   # GET /requests/new
   def new
     @request = Request.new
+
   end
 
   # GET /requests/1/edit
