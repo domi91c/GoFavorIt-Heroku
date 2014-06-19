@@ -18,7 +18,7 @@ class RequestsController < ApplicationController
   def show
 	  @user = User.find(current_user)
 	  @requests = @user.requests
-	  @gallery = Gallery.find(params[:gallery_id])
+	  @gallery = Gallery.find(@request.gallery_id)
 	  @pictures = @gallery.pictures
 
   end
@@ -27,6 +27,7 @@ class RequestsController < ApplicationController
   def new
     @request = Request.new
 	  @gallery = Gallery.new
+	  @request.gallery = @gallery
 
 
   end
@@ -39,7 +40,7 @@ class RequestsController < ApplicationController
   # POST /requests.json
   def create
     @request = Request.new(request_params)
-
+		@gallery = Gallery.new(params[:gallery_id])
     respond_to do |format|
       if @request.save
         format.html { redirect_to @request, notice: 'Request was successfully created.' }
@@ -83,6 +84,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-	    params.require(:request).permit(:title, :description, :username, :photo, :gallery_id).merge(user_id: current_user.id,)
+	    params.require(:request).permit(:title, :description, :username, :photo).merge(user_id: current_user.id)
     end
 end
