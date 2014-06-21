@@ -25,11 +25,7 @@ class GalleriesController < ApplicationController
   # GET /galleries/new
   # GET /galleries/new.json
   def new
-	  @request = Request.find(params[:request_id])
 	  @gallery = Gallery.new(params[:request_id])
-
-	  @gallery = @request.gallery.new(gallery_params)
-    @gallery = @request.gallery.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -46,7 +42,6 @@ class GalleriesController < ApplicationController
   # POST /galleries.json
   def create
     @gallery = Gallery.new(gallery_params)
-    @request.gallery.create
 
     respond_to do |format|
       if @gallery.save
