@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140618214148) do
+ActiveRecord::Schema.define(version: 20140619221909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -205,7 +205,6 @@ ActiveRecord::Schema.define(version: 20140618214148) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.string   "favortype"
-    t.integer  "gallery_id"
   end
 
   add_index "requests", ["user_id"], name: "index_requests_on_user_id", using: :btree

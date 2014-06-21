@@ -2,6 +2,8 @@ class Picture < ActiveRecord::Base
   # attr_accessible :description, :gallery_id, :image
 
   belongs_to :gallery
+  belongs_to :request
+
 
   has_attached_file :image,
     :path => ":rails_root/public/images/:id/:filename",

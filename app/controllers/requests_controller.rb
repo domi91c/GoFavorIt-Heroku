@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-  before_action :set_request, only: [:show, :edit, :update, :destroy]
+  before_action :set_request, only: [ :show, :edit, :update, :destroy]
 
   # GET /requests
   # GET /requests.json
@@ -16,20 +16,19 @@ class RequestsController < ApplicationController
   # GET /requests/1
   # GET /requests/1.json
   def show
-	  @user = User.find(current_user)
-	  @requests = @user.requests
-	  @gallery = Gallery.find(@request.gallery_id)
-	  @pictures = @gallery.pictures
-
+	  @request  = Request.find(params[:id])
+	  unless @request.gallery.nil?
+		  @gallery = @request.gallery
+		  @pictures = @gallery.pictures
+	  end
   end
+
 
   # GET /requests/new
   def new
-    @request = Request.new
-	  @gallery = Gallery.new
-	  @request.gallery = @gallery
-
-
+	  @request = Request.new
+	  @gallery = @request.build_gallery
+	  @pictures = @gallery.pictures
   end
 
   # GET /requests/1/edit
@@ -39,8 +38,11 @@ class RequestsController < ApplicationController
   # POST /requests
   # POST /requests.json
   def create
-    @request = Request.new(request_params)
-		@gallery = Gallery.new(params[:gallery_id])
+	  @request = Request.new request_params
+	  @request.build_gallery
+    @pictures = @request.gallery.pictures
+
+
     respond_to do |format|
       if @request.save
         format.html { redirect_to @request, notice: 'Request was successfully created.' }
@@ -84,6 +86,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-	    params.require(:request).permit(:title, :description, :username, :photo).merge(user_id: current_user.id)
+	    params.require(:request).permit(:title, :description, :username, gallery_attributes: [:id, :name, :description]).merge(user_id: current_user.id)
     end
 end

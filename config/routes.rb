@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
 	resources :locations
 
-	resources :requests
+	resources :requests do
+		resources :galleries
+	end
 
 	resources :offers
 
