@@ -39,6 +39,7 @@
           <div class="navlogo">
 
           </div>
+          <%= link_to request.user.username %></td>
 
         <td><%= link_to request.title, request_path(request) %></td>
         <td><%= request.created_at.strftime("%H:%M %b %d") %></td>

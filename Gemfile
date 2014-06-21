@@ -85,3 +85,4 @@ gem 'simple_form'
 gem 'country_select'
 gem 'kaminari'
 gem 'rmagick'
+
