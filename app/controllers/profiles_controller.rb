@@ -22,11 +22,18 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+	  @profile  = Profile.find(params[:id])
+	  unless @profile.gallery.nil?
+		  @gallery = @profile.gallery
+		  @pictures = @gallery.pictures
+	  end
   end
 
   # GET /profiles/new
   def new
     @profile = Profile.new
+    @gallery = @profile.build_gallery
+    @pictures = @gallery.pictures
   end
 
   # GET /profiles/1/edit
@@ -36,10 +43,20 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.json
   def create
-    @profile = Profile.new(profile_params)
+	  @profile = Profile.new request_params
+	  @profile.build_gallery
+	  @pictures = @profile.gallery.pictures
 
-    respond_to do |format|
-      if @profile.save
+
+	  respond_to do |format|
+		  if @profile.save
+
+			  if params[:images]
+				  # The magic is here ;)
+				  params[:images].each { |image|
+					  @pictures.create(image: image)
+				  }
+			  end
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
         format.json { render :show, status: :created, location: @profile }
       else
@@ -81,6 +98,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:name, :email, :bio, :image_url).merge(user_id: current_user.id)
+      params.require(:profile).permit(:name, :email, :bio, :image_url, gallery_attributes: [:id, :name, :description]).merge(user_id: current_user.id)
     end
 end

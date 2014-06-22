@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :walls do
+	  resources :galleries
+  end
+
   resources :inboxes
 
 	resources :locations
@@ -16,7 +20,6 @@ Rails.application.routes.draw do
 
 	resources :posts
 
-  resources :galleries
 
   resources :pictures
 

@@ -25,7 +25,8 @@ class GalleriesController < ApplicationController
   # GET /galleries/new
   # GET /galleries/new.json
   def new
-	  @gallery = Gallery.new(params[:request_id])
+
+	  @gallery = Gallery.new(params[:wall_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -91,6 +92,6 @@ class GalleriesController < ApplicationController
   end
 
   def gallery_params
-	  params.require(:gallery).permit(:name, :description, :cover, :token, :request_id)
+	  params.require(:gallery).permit(:name, :description, :cover, :token, :request_id, :wall_id)
   end
 end

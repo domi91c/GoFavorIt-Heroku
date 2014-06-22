@@ -1,0 +1,37 @@
+<%= simple_form_for(@wall) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :bio %>
+    <%= f.input :user_id %>
+  </div>
+
+    <%= f.fields_for @wall.gallery do |ff| %>
+
+        <div class="control-group">
+          <%= ff.label :name, :class => 'control-label' %>
+          <div class="controls">
+            <%= ff.text_field :name, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= ff.label :description, :class => 'control-label' %>
+          <div class="controls">
+            <%= ff.text_field :description, :class => 'text_field' %>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%= ff.label :pictures, :class => 'control-label' %>
+          <div class="controls">
+            <!-- The magic is coming ...look at my eyes....shazammmm -->
+            <%= file_field_tag "images[]", type: :file, multiple: true %>
+          </div>
+        </div>
+
+    <% end %>
+
+    <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
