@@ -1,10 +1,10 @@
-<%= simple_form_for(@wall) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :bio %>
-    <%= f.input :user_id %>
-  </div>
+<%= form_for @wall, :html => { :multipart => true } do |f| %>
+
+    <%= render partial: "shared/errors", locals: {obj: @wall} %>
+
+
+
 
     <%= f.fields_for @wall.gallery do |ff| %>
 
@@ -31,7 +31,10 @@
 
     <% end %>
 
+
     <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+      <%= f.submit nil, :class => 'button' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  walls_path, :class => 'button' %>
+    </div>
 <% end %>

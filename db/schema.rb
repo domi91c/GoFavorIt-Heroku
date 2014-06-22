@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622201524) do
+ActiveRecord::Schema.define(version: 20140622210317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -154,6 +154,7 @@ ActiveRecord::Schema.define(version: 20140622201524) do
     t.datetime "updated_at"
     t.integer  "request_id"
     t.integer  "post_id"
+    t.integer  "wall_id"
   end
 
   add_index "post_attachments", ["request_id"], name: "index_post_attachments_on_request_id", using: :btree

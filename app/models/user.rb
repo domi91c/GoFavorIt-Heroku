@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 	has_many :offers
 	has_many :requests
 	has_one :profile
+	has_one :wall
 
 	def name
 		 "#{first_name} #{last_name}"

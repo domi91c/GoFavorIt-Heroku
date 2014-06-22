@@ -8,7 +8,7 @@ gem 'therubyracer'
 gem 'jazz_hands'
 gem 'gmaps4rails', '~> 1.5.6'
 gem 'geocoder'
-gem 'paperclip', github: 'thoughtbot/paperclip'# Use jquery as the JavaScript library
+gem 'paperclip', '~> 4.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
