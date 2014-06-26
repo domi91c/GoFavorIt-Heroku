@@ -14,18 +14,19 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
-		render profiles_path
+		render wall_path(current_user)
 
 	end
 	def create
 		@user = User.new(sign_up_params)
+		@user.build_wall
 
 		if @user.save
 			redirect_to posts_path, notice: 'User successfully added.'
 			raise params.inspect
 
 		else
-			render profiles_path
+			render wall_path(current_user)
 
 		end
 	end
